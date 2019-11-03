@@ -45,7 +45,7 @@
 				</tbody>
 			</table>
 
-		<button class="ui button" name="_eventId_edit" type="submit">Edit</button>
+		<a href="${flowExecutionUrl}&_eventId_edit" class="ui button">Edit</a>
 		<a href="${flowExecutionUrl}&_eventId_submit" class="ui button">Submit</a>
 
 

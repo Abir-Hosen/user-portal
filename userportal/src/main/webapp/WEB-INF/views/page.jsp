@@ -74,7 +74,7 @@
 	<script type="text/javascript">
 		window.menu = '${title}';
 		
-		 
+/* 		 
 		var serverContext = [[@{/}]];
 		function savePass(){
 		    var pass = $("#pass").val();
@@ -91,7 +91,7 @@
 		        $("#errormsg").show().html(data.responseJSON.message);
 		    });
 		}
-		
+		 */
 		$(document).ready(function() {
 		    $('#example').DataTable();
 		} );

@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import net.abir.portalbackend.dao.UserDao;
 import net.abir.portalbackend.dto.User;
 
-
 @Controller
 @RequestMapping("/json/data")
 public class JsonDataController {
@@ -26,9 +25,10 @@ public class JsonDataController {
 	@RequestMapping("/all/user")
 	@ResponseBody
 	public List<User> getAllproducts(){
+		System.out.println("Inside json controller.");
 		return userDao.userList();
 	}
-	
+
 	
 /*	@RequestMapping("/user/{id}")
 	@ResponseBody

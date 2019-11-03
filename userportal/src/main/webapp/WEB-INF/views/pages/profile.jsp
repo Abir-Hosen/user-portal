@@ -1,9 +1,13 @@
+<%@taglib prefix="security" uri="http://www.springframework.org/security/tags" %> 
 <div class="ui internally celled grid">
 
 	<div class="ui four wide column">
 		<div class="ui fluid vertical menu">
 			<a class="item" id="profile-page" href="${contextRoot}/">Profile Page</a>
 			<a class="item" id="change-password" href="${contextRoot}/change-password">Change Password</a>
+			<security:authorize access="hasAuthority('admin')">
+				<a class="item" id="admin" href="${contextRoot}/admin">Admin</a>
+			</security:authorize>
 		</div>
 	</div>
 	

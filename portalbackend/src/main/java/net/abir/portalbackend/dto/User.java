@@ -15,6 +15,8 @@ import javax.persistence.Transient;
 import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 @Entity
 public class User implements Serializable{
@@ -38,14 +40,18 @@ public class User implements Serializable{
 	private String phone;
 	@NotBlank(message = "Please enter email!")
 	private String email;
+	@JsonIgnore
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date birthdate;
+	@JsonIgnore
 	@NotBlank(message = "Please enter password!")
 	private String password;
 	private String role;
 	private boolean allowance;
+	@JsonIgnore
 	@Transient
 	private String confirmPassword;
+	@JsonIgnore
 	@Transient
 	private int age;
 	

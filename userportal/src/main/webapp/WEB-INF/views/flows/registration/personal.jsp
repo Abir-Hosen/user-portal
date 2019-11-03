@@ -5,7 +5,7 @@
 	<div style="margin: 3% 30%;">
 	
 	<sf:form class="ui form" method="POST" id="registerForm" modelAttribute="user">
-	
+		<h2 class="form-signin-heading">Register Panel</h2>
 		<div class="field">
 			<label>First Name</label> 
 			<sf:input type="text" path="first_name" placeholder="First Name"></sf:input>
@@ -32,7 +32,7 @@
 		
 		<div class="field">
 			<label>Email</label>
-			<sf:input type="text" path="email" placeholder="Email"></sf:input>
+			<sf:input type="text" path="email" name="email" id="email" placeholder="Email"></sf:input>
 			<sf:errors path="email" class="error" element="em"/>
 		</div>
 		
@@ -49,7 +49,7 @@
 		<sf:hidden path="role" value="user"/>
 		<sf:hidden path="allowance" value="true"/>
 
-		<button class="ui button" name="_eventId_confirm" type="submit">Register</button>
+		<button class="ui button" name="_eventId_confirm" id="register" type="submit">Register</button>
 		<button class="ui button" name="_eventId_home" type="submit">Cancel</button>
 	
 	</sf:form>

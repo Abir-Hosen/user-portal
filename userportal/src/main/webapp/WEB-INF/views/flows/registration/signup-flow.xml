@@ -35,7 +35,7 @@
 	
 	<end-state id="home" view="externalRedirect:contextRelative:/" />
 	<end-state id="success" view="flows/registration/success" />
-		
+	
 	<global-transitions>
 		<transition on="home" to="home" validate="false" />
 	</global-transitions>
